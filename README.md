@@ -1,13 +1,13 @@
-# Readme Generator
+# Educational Group game
 
 ## Description
-This is a python file I created to help simplify the process of creating readMe files on my GitHub
+This is the Educational Game made in Java
 
 ## Running Instructions
 run and debug
 
 ## Author
-Tom
+dunno
 
 ## Screenshot
 ![Screenshot]()
