@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SwingUtilities.invokeLater(() -> {
+            FXskel fxskel = new FXskel();
+            fxskel.initialize();
+        });
     }
 }
