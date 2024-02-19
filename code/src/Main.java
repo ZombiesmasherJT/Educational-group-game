@@ -7,9 +7,6 @@ public class Main {
             fxskel.initialize();
         });
     }
-
-josh test 2
-   
 }
 
 
