@@ -1,5 +1,3 @@
-// FXskel.java
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,11 +9,21 @@ public class FXskel extends JFrame {
 
     public void initialize() {
         setTitle("FXskel");
-        setSize(500, 600);
+
+        // Set fullscreen mode
+        GraphicsDevice device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        if (device.isFullScreenSupported()) {
+            setUndecorated(false); // Remove window decorations (e.g., title bar)
+            device.setFullScreenWindow(this);
+        } else {
+            System.err.println("Fullscreen mode not supported");
+            setSize(Toolkit.getDefaultToolkit().getScreenSize()); // Set to maximum screen size
+            setLocationRelativeTo(null); // Center the window on the screen
+        }
+
         setMinimumSize(new Dimension(300, 400));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(new menu(this));
-
         setVisible(true);
     }
 
@@ -25,6 +33,5 @@ public class FXskel extends JFrame {
         repaint(); // Repaint the frame to show the new content
     }
 }
-
 
 
