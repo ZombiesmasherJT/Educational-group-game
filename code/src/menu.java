@@ -13,7 +13,7 @@ public class menu extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Color.GRAY);
 
-        addMenuButton("Play", e -> System.out.println("Play clicked"));
+        addMenuButton("Play", e -> System.out.println("Play clicked!"));
         addMenuButton("My Character", e -> System.out.println("My Character clicked"));
         addMenuButton("Achievements", e -> System.out.println("Achievements clicked"));
         // Modify the action listener for the "Help" button
