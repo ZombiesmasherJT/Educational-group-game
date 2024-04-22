@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+//Version 1.2.1 (TM)
 public class Main extends Application {
 
     @Override
