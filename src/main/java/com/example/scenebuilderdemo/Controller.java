@@ -13,20 +13,11 @@ import java.util.Objects;
 
 public class Controller {
     private Stage stage;
-    HELP ME HELP ME HELP ME
     private Scene scene;
     private Parent root;
 
     public void switchToMenuPage(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menuFile.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToFirstLevel(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("firstLevelFile.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -49,6 +40,14 @@ public class Controller {
         stage.show();
     }
 
+    public void switchToFirstLevel(ActionEvent event) throws Exception {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("levelOneQ1.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void switchToWorkInProgress(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("workInProgressFile.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -56,4 +55,5 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
 }
