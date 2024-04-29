@@ -1,5 +1,6 @@
 package com.example.scenebuilderdemo;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,4 +56,14 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
+
+    @FXML
+    private void handleExitButtonAction(ActionEvent event) {
+        Platform.exit();
+    }
+
+
+
+
 }
