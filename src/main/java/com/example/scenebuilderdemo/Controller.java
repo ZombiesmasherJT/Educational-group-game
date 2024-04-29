@@ -13,6 +13,7 @@ import java.util.Objects;
 
 public class Controller {
     private Stage stage;
+    HELP ME HELP ME HELP ME
     private Scene scene;
     private Parent root;
 
