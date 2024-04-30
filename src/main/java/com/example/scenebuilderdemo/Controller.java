@@ -57,13 +57,9 @@ public class Controller {
         stage.show();
     }
 
-
     @FXML
     private void handleExitButtonAction(ActionEvent event) {
         Platform.exit();
     }
-
-
-
 
 }

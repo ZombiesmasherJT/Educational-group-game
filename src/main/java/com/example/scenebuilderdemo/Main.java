@@ -22,6 +22,15 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
 
+
+
+
+        String filepath = "kids music.wav";
+
+        music musicObject = new music();
+
+        musicObject.playMusic(filepath);
+
     }
 
     public static void main(String[] args) {
