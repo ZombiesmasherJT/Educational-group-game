@@ -28,6 +28,9 @@ public class QuizController {
 
     @FXML
     private void initialize() {
+        counter = 0; // Reset counter to start from the first question
+        correct = 0; // Reset correct count
+        wrong = 0;   // Reset wrong count
         loadQuestions();
     }
 

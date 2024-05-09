@@ -1,8 +1,17 @@
 package com.example.scenebuilderdemo;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.io.IOException;
 
 public class ResultController {
 
@@ -44,8 +53,26 @@ public class ResultController {
         } else if (correct==5) {
             remark.setText("FULL MARKS");
         }
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), evt -> {
+            try {
+                switchToLevelSelectPage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }));
+        timeline.play();
+    }
 
+    private void switchToLevelSelectPage() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("levelSelect.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) remark.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 
     }
 
-}
+
+
+
