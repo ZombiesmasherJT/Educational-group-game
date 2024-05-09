@@ -7,8 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.animation.ScaleTransition;
+import javafx.util.Duration;
 
 import java.util.Objects;
 
@@ -17,40 +19,53 @@ public class Controller {
     private Scene scene;
     private Parent root;
 
-    public void switchToMenuPage(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menuFile.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    // Buttons that may have animations
+    @FXML
+    private Button startButton;
+    @FXML
+    private Button helpButton;
+    @FXML
+    private Button exitButton;
+
+    // Initialize method to set up animations
+    @FXML
+    private void initialize() {
+        setupButtonAnimation(startButton);
+        setupButtonAnimation(helpButton);
+        setupButtonAnimation(exitButton);
     }
 
-    public void switchToFirstLevel(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("firstLevelFile.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    // Method to add hover animations
+    private void setupButtonAnimation(Button button) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(200), button);
+        st.setToX(1.1);
+        st.setToY(1.1);
+        st.setCycleCount(2);
+        st.setAutoReverse(true);
+
+        button.setOnMouseEntered(e -> st.playFromStart());
+        button.setOnMouseExited(e -> st.stop());
+    }
+
+    private void switchToFirstLevel(ActionEvent event) throws Exception {
+        switchPage(event, "firstLevelFile.fxml");
     }
 
     public void switchToHelpPage(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("helpFile.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        System.out.println("SWITCH TEST");
+        switchPage(event, "helpFile.fxml");
     }
 
     public void switchToMainPage(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainFile.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        switchPage(event, "mainFile.fxml");
     }
 
     public void switchToWorkInProgress(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("workInProgressFile.fxml")));
+        switchPage(event, "workInProgressFile.fxml");
+    }
+
+    private void switchPage(ActionEvent event, String fxmlFile) throws Exception {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFile)));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -61,5 +76,4 @@ public class Controller {
     private void handleExitButtonAction(ActionEvent event) {
         Platform.exit();
     }
-
 }
