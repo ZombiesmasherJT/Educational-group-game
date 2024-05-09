@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("mainFile.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
 
         stage.setTitle("Hydro Heroes: The Quest for Clean Water");
         stage.setResizable(false);

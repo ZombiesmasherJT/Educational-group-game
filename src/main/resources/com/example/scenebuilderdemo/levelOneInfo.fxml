@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.Controller">
    <children>
       <TextField layoutX="207.0" layoutY="51.0" text="INFO" />
-      <Button layoutX="274.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToMenuPage" text="MENU" />
+      <Button layoutX="274.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToLevelOneMenu" text="BACK" />
    </children>
 </AnchorPane>
