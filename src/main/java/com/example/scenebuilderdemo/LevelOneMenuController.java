@@ -7,29 +7,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
-public class QuizMenuController {
-
+public class LevelOneMenuController {
     @FXML
-    private Button playquizbtn;
-
+    private Button playQuizOneButton;
     @FXML
-    private Button playinfobtn;
-
+    private Button playInfoOneButton;
     @FXML
     private void initialize() {
-        setupButtonAnimation(playquizbtn);
-        setupButtonAnimation(playinfobtn);
-
-        playquizbtn.setOnAction(new EventHandler<ActionEvent>() {
+        setupButtonAnimation(playQuizOneButton);
+        setupButtonAnimation(playInfoOneButton);
+        playQuizOneButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 try {
                     Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                     thisstage.close();
@@ -38,7 +31,8 @@ public class QuizMenuController {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.initStyle(StageStyle.TRANSPARENT);
+                    stage.setTitle("Hydro Heroes: The Quest for Clean Water");
+                    stage.setResizable(false);
                     scene.setFill(Color.TRANSPARENT);
                     stage.show();
                 } catch (Exception e) {
@@ -46,11 +40,9 @@ public class QuizMenuController {
                 }
             }
         });
-
-        playinfobtn.setOnAction(new EventHandler<ActionEvent>() {
+        playInfoOneButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 try {
                     Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                     thisstage.close();
@@ -59,7 +51,8 @@ public class QuizMenuController {
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setScene(scene);
-                    stage.initStyle(StageStyle.TRANSPARENT);
+                    stage.setTitle("Hydro Heroes: The Quest for Clean Water");
+                    stage.setResizable(false);
                     scene.setFill(Color.TRANSPARENT);
                     stage.show();
                 } catch (Exception e) {

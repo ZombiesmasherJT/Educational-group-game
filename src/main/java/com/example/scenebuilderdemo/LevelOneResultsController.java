@@ -7,40 +7,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressIndicator;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class ResultController {
-
+public class LevelOneResultsController {
     @FXML
-    public Label remark, marks, markstext, correcttext, wrongtext;
-
-    @FXML
-    public ProgressIndicator correct_progress, wrong_progress;
-
+    public Label remark, markProgress, markText;
     int correct;
     int wrong;
-
     @FXML
     private void initialize() {
-        correct = QuizController.correct;
-        wrong = QuizController.wrong;
+        correct = LevelOneQuizController.correct;
+        wrong = LevelOneQuizController.wrong;
 
-        correcttext.setText("Correct Answers : " + correct);
-        wrongtext.setText("Incorrect Answers : " + String.valueOf(QuizController.wrong));
+        markProgress.setText(correct + "/5");
 
-        marks.setText(correct + "/5");
-        float correctf = (float) correct/5;
-        correct_progress.setProgress(correctf);
-
-        float wrongf = (float) wrong/5;
-        wrong_progress.setProgress(wrongf);
-
-
-        markstext.setText(correct + " Marks Scored");
+        markText.setText(correct + " Marks Scored");
 
         if (correct<2) {
             remark.setText("1 OUT OF 5");
@@ -51,8 +35,9 @@ public class ResultController {
         } else if (correct==4) {
             remark.setText("4 OUT OF 5");
         } else if (correct==5) {
-            remark.setText("FULL MARKS");
+            remark.setText("5 OUT OF 5");
         }
+
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), evt -> {
             try {
                 switchToLevelSelectPage();
@@ -62,7 +47,6 @@ public class ResultController {
         }));
         timeline.play();
     }
-
     private void switchToLevelSelectPage() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("levelSelect.fxml"));
         Parent root = loader.load();
@@ -70,8 +54,7 @@ public class ResultController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-    }
+}
 
 
 
