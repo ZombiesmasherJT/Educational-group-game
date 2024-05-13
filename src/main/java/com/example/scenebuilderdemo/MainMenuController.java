@@ -1,11 +1,13 @@
 package com.example.scenebuilderdemo;
 
 import javafx.animation.ScaleTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -18,48 +20,61 @@ public class MainMenuController {
     @FXML
     private Button helpButton;
     @FXML
+    private Button quitButton;
+    @FXML
     private void initialize() {
         setupButtonAnimation(startButton);
         setupButtonAnimation(helpButton);
-        startButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    thisstage.close();
+        setupButtonAnimation(quitButton);
+        startButton.setOnAction(this::handleStartButton); // Action event for Back Button
+        helpButton.setOnAction(this::handleHelpButton); // Action event for Help Button
+        quitButton.setOnAction(this::closeCurrentStage); // this is an action for the quit button for the application
+    }
 
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("levelSelect.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.initStyle(StageStyle.TRANSPARENT);
-                    scene.setFill(Color.TRANSPARENT);
-                    stage.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+    private void handleStartButton(ActionEvent event) { // Method for the Back Button
+        try {
+            closeCurrentStage(event); // Method to close current stage
+            loadNewStage("levelSelect.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+        } catch (Exception e) {
+            e.printStackTrace(); // Prints the stack trace for debugging purposes
+            Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
+            error.setTitle("Error");
+            error.setHeaderText("An error has occurred");
+            error.setContentText("Unable to load the Main Menu");
+            error.showAndWait();
+        }
+    }
 
-        helpButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    thisstage.close();
-
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("helpPage.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.initStyle(StageStyle.TRANSPARENT);
-                    scene.setFill(Color.TRANSPARENT);
-                    stage.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+    private void handleHelpButton(ActionEvent event) { // Method for the Back Button
+        try {
+            closeCurrentStage(event); // Method to close current stage
+            loadNewStage("helpPage.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+        } catch (Exception e) {
+            e.printStackTrace(); // Prints the stack trace for debugging purposes
+            Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
+            error.setTitle("Error");
+            error.setHeaderText("An error has occurred");
+            error.setContentText("Unable to load the Main Menu");
+            error.showAndWait();
+        }
+    }
+    @FXML
+    private void handleQuitButton() {
+        Platform.exit(); // This method will close the JavaFX application
+    }
+    private void closeCurrentStage(ActionEvent event) { // Method to close current stage
+        Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        currentStage.close();
+    }
+    private void loadNewStage(String fxmlFileName, String title) throws Exception { // Method to load new stage
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileName));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle(title);
+        stage.setResizable(false);
+        scene.setFill(Color.TRANSPARENT);
+        stage.show();
     }
     private void setupButtonAnimation(Button button) {
         ScaleTransition st = new ScaleTransition(Duration.millis(200), button);
@@ -71,4 +86,5 @@ public class MainMenuController {
         button.setOnMouseEntered(e -> st.playFromStart());
         button.setOnMouseExited(e -> st.stop());
     }
+
 }

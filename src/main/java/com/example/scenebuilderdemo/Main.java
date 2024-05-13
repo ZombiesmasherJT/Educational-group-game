@@ -18,6 +18,14 @@ public class Main extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
         stage.show();
+
+
+        String filepath = "gamemusic.wav";
+
+        music musicObject = new music();
+
+        musicObject.playMusic(filepath);
+
     }
 
     public static void main(String[] args) {
