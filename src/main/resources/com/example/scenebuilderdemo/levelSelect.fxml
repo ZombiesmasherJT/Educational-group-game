@@ -7,29 +7,29 @@
 
 <AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.Controller">
    <children>
-      <Button layoutX="83.0" layoutY="127.0" mnemonicParsing="false" onAction="#switchToLevelOneMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 1">
+      <Button layoutX="70.0" layoutY="127.0" mnemonicParsing="false" onAction="#switchToLevelOneMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 1">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button layoutX="344.0" layoutY="127.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="230.0" text="LEVEL 2">
+      <Button layoutX="411.0" layoutY="127.0" mnemonicParsing="false" onAction="#switchToLevelTwoMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 2">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button alignment="CENTER" layoutX="239.0" layoutY="398.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="40.0" prefWidth="160.0" text="Button">
+      <Button alignment="CENTER" layoutX="239.0" layoutY="398.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="40.0" prefWidth="160.0" text="BACK">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Label layoutX="243.0" layoutY="29.0" text="Level Select">
+      <Label layoutX="230.0" layoutY="36.0" text="LEVEL SELECT">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="48.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="230.0" text="WORK IN PROGRESS">
+      <Button layoutX="70.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="160.0" text="LEVEL 3">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="356.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="230.0" text="WORK IN PROGRESS">
+      <Button layoutX="411.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="160.0" text="LEVEL 4">
          <font>
             <Font size="20.0" />
          </font>

@@ -7,30 +7,25 @@
 
 <AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelOneQuizController">
    <children>
-      <Label fx:id="question" alignment="CENTER" layoutX="59.0" layoutY="23.0" prefHeight="58.0" prefWidth="534.0" text="Question 1" wrapText="true">
+      <Label fx:id="question" alignment="TOP_LEFT" layoutX="233.0" layoutY="23.0" prefHeight="207.0" prefWidth="392.0" text="Question 1" wrapText="true">
          <font>
             <Font size="30.0" />
-         </font>
-      </Label>
-      <Button fx:id="optionOne" layoutX="129.0" layoutY="174.0" mnemonicParsing="false" onAction="#optionOneClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+         </font></Label>
+      <Button fx:id="optionOneButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#optionOneButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
          <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="optionTwo" layoutX="359.0" layoutY="174.0" mnemonicParsing="false" onAction="#optionTwoClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="optionTwoButton" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#optionTwoButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
          <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="optionThree" layoutX="129.0" layoutY="261.0" mnemonicParsing="false" onAction="#optionThreeClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="optionThreeButton" layoutX="14.0" layoutY="254.0" mnemonicParsing="false" onAction="#optionThreeButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
          <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="optionFour" layoutX="359.0" layoutY="261.0" mnemonicParsing="false" onAction="#optionFourClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="optionFourButton" layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#optionFourButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
          <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
+            <Font size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>

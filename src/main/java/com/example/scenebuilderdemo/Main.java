@@ -7,22 +7,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.Objects;
 
-//Version 1.2.1 (TM)
+/**
+ *This is the main class which launches the application
+ * @author Tedi Mengjezi
+ */
 public class Main extends Application {
-
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainPage.fxml")));
-
-        stage.setTitle("Hydro Heroes: The Quest for Clean Water");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainPage.fxml"))); // Loads the FXML file for the main page
+        stage.setTitle("Hydro Heroes: The Quest for Clean Water"); // Sets the stage properties
         stage.setResizable(false);
-
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root); // Creates and sets the scene
         stage.setScene(scene);
-        stage.show();
+        stage.show(); // Shows the stage
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Method which launches the main application
         launch(args);
     }
 }

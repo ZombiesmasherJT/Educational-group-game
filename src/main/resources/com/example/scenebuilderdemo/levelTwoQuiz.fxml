@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelTwoQuizController">
+    <children>
+        <Label fx:id="question" alignment="CENTER" layoutX="59.0" layoutY="23.0" prefHeight="58.0" prefWidth="534.0" text="Question 1" wrapText="true">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="optionOneButton" layoutX="129.0" layoutY="174.0" mnemonicParsing="false" onAction="#optionOneButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="optionTwoButton" layoutX="359.0" layoutY="174.0" mnemonicParsing="false" onAction="#optionTwoButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="optionThreeButton" layoutX="129.0" layoutY="261.0" mnemonicParsing="false" onAction="#optionThreeButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="optionFourButton" layoutX="359.0" layoutY="261.0" mnemonicParsing="false" onAction="#optionFourButtonClicked" prefHeight="40.0" prefWidth="160.0" text="Button">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

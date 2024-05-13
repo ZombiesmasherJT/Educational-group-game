@@ -2,7 +2,6 @@ package com.example.scenebuilderdemo;
 
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,10 +13,10 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
- *This class is responsible for generating the information page for level one
+ *This class is responsible for generating the information page for level two
  * @author Tedi Mengjezi
  */
-public class LevelOneInfoController {
+public class LevelTwoInfoController {
     @FXML
     public TextField infoText;
     @FXML
@@ -31,14 +30,14 @@ public class LevelOneInfoController {
     private void handleBackButton(ActionEvent event) { // Method for the Back Button
         try {
             closeCurrentStage(event); // Method to close current stage
-            loadNewStage("levelOneMenu.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+            loadNewStage("levelTwoMenu.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
         } catch (Exception e) {
             e.printStackTrace(); // Prints the stack trace for debugging purposes
-             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
-             error.setTitle("Error");
-             error.setHeaderText("An error occurred");
-            error.setContentText("Unable to load the menu for Level One");
-             error.showAndWait();
+            Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
+            error.setTitle("Error");
+            error.setHeaderText("An error has occurred");
+            error.setContentText("Unable to load the menu for Level Two");
+            error.showAndWait();
         }
     }
     private void closeCurrentStage(ActionEvent event) { // Method to close current stage
@@ -55,7 +54,7 @@ public class LevelOneInfoController {
         scene.setFill(Color.TRANSPARENT);
         stage.show();
     }
-    private void loadInfo() { // Method which loads the information into the TextField
+    private void loadInfo() { //Method which loads the information into the TextField
         infoText.setText("INSERT TEXT REGARDING SUBJECT TOPIC HERE");
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation
