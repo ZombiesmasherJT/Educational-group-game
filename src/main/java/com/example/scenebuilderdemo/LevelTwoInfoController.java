@@ -2,6 +2,7 @@ package com.example.scenebuilderdemo;
 
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,8 +36,8 @@ public class LevelTwoInfoController {
             e.printStackTrace(); // Prints the stack trace for debugging purposes
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
             error.setTitle("Error");
-            error.setHeaderText("An error has occurred");
-            error.setContentText("Unable to load the menu for Level Two");
+            error.setHeaderText("An error occurred");
+            error.setContentText("Unable to load the menu for Level One");
             error.showAndWait();
         }
     }
@@ -54,7 +55,7 @@ public class LevelTwoInfoController {
         scene.setFill(Color.TRANSPARENT);
         stage.show();
     }
-    private void loadInfo() { //Method which loads the information into the TextField
+    private void loadInfo() { // Method which loads the information into the TextField
         infoText.setText("INSERT TEXT REGARDING SUBJECT TOPIC HERE");
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation

@@ -24,7 +24,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="70.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="160.0" text="LEVEL 3">
+      <Button layoutX="70.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToLevelThreeMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 3">
          <font>
             <Font size="20.0" />
          </font>

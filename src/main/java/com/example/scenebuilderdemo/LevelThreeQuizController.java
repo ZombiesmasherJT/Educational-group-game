@@ -13,10 +13,10 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import java.io.IOException;
 /**
- *This class is responsible for generating the quiz page and handling all the logic for level one
+ *This class is responsible for generating the quiz page and handling all the logic for level three
  * @author Tedi Mengjezi
  */
-public class LevelOneQuizController {
+public class LevelThreeQuizController {
     @FXML
     public Label question; // Label which displays the question
     @FXML
@@ -37,16 +37,16 @@ public class LevelOneQuizController {
     }
     private void loadQuestions() { //Method which stores and loads the correct question and answer prompts
         String[] questions = { // Array storing Questions
-                "How many people in Ethiopia suffer from a lack of clean water?",
-                "What was the Millennium Development Goal target?",
-                "What percentage of health problems are caused by unsafe water supply?",
-                "What does the ONEWASH program aim to do?",
+                "How many people in Chad can access clean water?",
+                "How many children have access clean water?",
+                "How many children wash there hands?",
+                "What age group is most at risk?",
         };
         String[][] options = { // Array storing answers
-                {"8 out of 10", "3 out of 7", "4 out of 10", "9 out of 100"},
-                {"25%", "50%", "60%", "80%"},
-                {"60% to 80%", "55% to 70%", "100%", "20% to 45%"},
-                {"Ensures that all cars \n" +"and buildings are \n" +"sanitised and clean", "Ensures that the \n" +"environment is safe \n" +"and sustainable", "Ensures that all \n" +"animals are groomed \n" +"and well kept", "Ensures that the \n" +"population has access \n" +"to safe water supply"},
+                {"46%", "2%", "79%", "43%"},
+                {"9 in 50", "1 in 2", "3 in 7", "1 in 5"},
+                {"7", "5 in 26", "1 in 17", "1 in 9"},
+                {"Children", "Young Adults", "The Elderly", "All of them"},
         };
         question.setText(questions[counter]); // Sets the current question and its answers
         optionOneButton.setText(options[counter][0]);
@@ -67,7 +67,7 @@ public class LevelOneQuizController {
         if (counter == 3) { // Checks if all questions have been answered and changes scene to results page
             try {
                 closeCurrentStage(event);
-                loadNewStage("levelOneResults.fxml", "Hydro Heroes: The Quest for Clean Water");
+                loadNewStage("levelThreeResults.fxml", "Hydro Heroes: The Quest for Clean Water");
             } catch (Exception e) {
                 e.printStackTrace();
                 Alert error = new Alert(Alert.AlertType.ERROR);
@@ -94,7 +94,7 @@ public class LevelOneQuizController {
         if (counter == 3) {
             try {
                 closeCurrentStage(event);
-                loadNewStage("levelOneResults.fxml", "Hydro Heroes: The Quest for Clean Water");
+                loadNewStage("levelThreeResults.fxml", "Hydro Heroes: The Quest for Clean Water");
             } catch (Exception e) {
                 e.printStackTrace();
                 Alert error = new Alert(Alert.AlertType.ERROR);
@@ -120,7 +120,7 @@ public class LevelOneQuizController {
         if (counter == 3) {
             try {
                 closeCurrentStage(event);
-                loadNewStage("levelOneResults.fxml", "Hydro Heroes: The Quest for Clean Water");
+                loadNewStage("levelThreeResults.fxml", "Hydro Heroes: The Quest for Clean Water");
             } catch (Exception e) {
                 e.printStackTrace();
                 Alert error = new Alert(Alert.AlertType.ERROR);
@@ -146,7 +146,7 @@ public class LevelOneQuizController {
         if (counter == 3) {
             try {
                 closeCurrentStage(event);
-                loadNewStage("levelOneResults.fxml", "Hydro Heroes: The Quest for Clean Water");
+                loadNewStage("levelThreeResults.fxml", "Hydro Heroes: The Quest for Clean Water");
             } catch (Exception e) {
                 e.printStackTrace();
                 Alert error = new Alert(Alert.AlertType.ERROR);
@@ -161,7 +161,7 @@ public class LevelOneQuizController {
         }
     }
     private boolean checkAnswer(String answer) { // Method which checks if the selected answer is correct
-        String[] correctAnswers = {"4 out of 10", "50%", "60% to 80%", "Ensures that the \n" +"population has access \n" +"to safe water supply"}; // Array containing the correct answers for each question
+        String[] correctAnswers = {"43%", "1 in 2", "1 in 17", "Children"}; // Array containing the correct answers for each question
         return answer.equals(correctAnswers[counter]); // Compares the selected answer to see if the answer is correct
     }
     private void closeCurrentStage(ActionEvent event) { // Method to close current stage

@@ -37,18 +37,16 @@ public class LevelTwoQuizController {
     }
     private void loadQuestions() { //Method which stores and loads the correct question and answer prompts
         String[] questions = { // Array storing Questions
-                "QUESTION 1",
-                "QUESTION 2",
-                "QUESTION 3",
-                "QUESTION 4",
-                "QUESTION 5"
+                "What percentage of people in Somalia have access to clean water?",
+                "How are most families forced to retrieve water?",
+                "What diseases can you contract from unsafe water?",
+                "Why is it a challenge to get clean water?",
         };
         String[][] options = { // Array storing answers
-                {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4"},
-                {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4"},
-                {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4"},
-                {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4"},
-                {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4"}
+                {"62%", "52%", "12%", "100%"},
+                {"Travelling to far and \n" +"unsafe wells", "Purifying river water", "Travelling to shops", "Collecting rainwater"},
+                {"Hepatitis and Measles", "Tapeworms and Lyme \n" +"disease", "Diarrhoea and Cholera", "Respiratory infections \n" +"and Ebola"},
+                {"There is not enough \n" +"water", "It isn't a challenge to \n" +"get clean water", "The distance to the \n" +"source is too far", "There isn't safe access \n" +"to get water"},
         };
         question.setText(questions[counter]); // Sets the current question and its answers
         optionOneButton.setText(options[counter][0]);
@@ -66,7 +64,7 @@ public class LevelTwoQuizController {
         } else {
             wrong++;
         }
-        if (counter == 4) { // Checks if all questions have been answered and changes scene to results page
+        if (counter == 3) { // Checks if all questions have been answered and changes scene to results page
             try {
                 closeCurrentStage(event);
                 loadNewStage("levelTwoResults.fxml", "Hydro Heroes: The Quest for Clean Water");
@@ -93,7 +91,7 @@ public class LevelTwoQuizController {
         } else {
             wrong++;
         }
-        if (counter == 4) {
+        if (counter == 3) {
             try {
                 closeCurrentStage(event);
                 loadNewStage("levelTwoResults.fxml", "Hydro Heroes: The Quest for Clean Water");
@@ -119,7 +117,7 @@ public class LevelTwoQuizController {
         } else {
             wrong++;
         }
-        if (counter == 4) {
+        if (counter == 3) {
             try {
                 closeCurrentStage(event);
                 loadNewStage("levelTwoResults.fxml", "Hydro Heroes: The Quest for Clean Water");
@@ -145,7 +143,7 @@ public class LevelTwoQuizController {
         } else {
             wrong++;
         }
-        if (counter == 4) {
+        if (counter == 3) {
             try {
                 closeCurrentStage(event);
                 loadNewStage("levelTwoResults.fxml", "Hydro Heroes: The Quest for Clean Water");
@@ -163,7 +161,7 @@ public class LevelTwoQuizController {
         }
     }
     private boolean checkAnswer(String answer) { // Method which checks if the selected answer is correct
-        String[] correctAnswers = {"OPTION 1", "OPTION 2", "OPTION 3", "OPTION 4", "OPTION 1"}; // Array containing the correct answers for each question
+        String[] correctAnswers = {"52%", "Travelling to far and \n" +"unsafe wells", "Diarrhoea and Cholera", "There isn't safe access \n" +"to get water"}; // Array containing the correct answers for each question
         return answer.equals(correctAnswers[counter]); // Compares the selected answer to see if the answer is correct
     }
     private void closeCurrentStage(ActionEvent event) { // Method to close current stage

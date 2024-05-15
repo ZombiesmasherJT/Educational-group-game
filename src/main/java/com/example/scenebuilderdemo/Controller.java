@@ -32,6 +32,9 @@ public class Controller {
     public void switchToLevelTwoMenu(ActionEvent event) throws IOException {
         loadFXML("levelTwoMenu.fxml", event);
     }
+    public void switchToLevelThreeMenu(ActionEvent event) throws IOException {
+        loadFXML("levelThreeMenu.fxml", event);
+    }
     public void switchToWorkInProgress(ActionEvent event) throws IOException {
         loadFXML("workInProgressFile.fxml", event);
     }

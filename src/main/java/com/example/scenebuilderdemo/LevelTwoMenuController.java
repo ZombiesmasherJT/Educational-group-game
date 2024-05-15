@@ -17,13 +17,13 @@ import javafx.util.Duration;
  */
 public class LevelTwoMenuController {
     @FXML
-    private Button playQuizTwoButton;
-    @FXML
     private Button playInfoTwoButton;
     @FXML
+    private Button playQuizTwoButton;
+    @FXML
     private void initialize() {
-        setupButtonAnimation(playQuizTwoButton); // Sets up the animation for buttons
-        setupButtonAnimation(playInfoTwoButton);
+        setupButtonAnimation(playInfoTwoButton); // Sets up the animation for buttons
+        setupButtonAnimation(playQuizTwoButton);
         playInfoTwoButton.setOnAction(this::handleInfoButton); // Action event for Info Button
         playQuizTwoButton.setOnAction(this::handleQuizButton); // Action event for Quiz Button
     }
@@ -36,7 +36,7 @@ public class LevelTwoMenuController {
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
             error.setTitle("Error");
             error.setHeaderText("An error has occurred");
-            error.setContentText("Unable to load the Information for Level Two");
+            error.setContentText("Unable to load the Information for Level One");
             error.showAndWait();
         }
     }
@@ -49,7 +49,7 @@ public class LevelTwoMenuController {
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
             error.setTitle("Error");
             error.setHeaderText("An error has occurred");
-            error.setContentText("Unable to load the Quiz for Level Two");
+            error.setContentText("Unable to load the Quiz for Level One");
             error.showAndWait();
         }
     }

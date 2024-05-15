@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 public class LevelOneResultsController {
     @FXML
-    public Label remark, markProgress, markText;
+    public Label markTotal, markProgressDisplay, markResponse;
     int correct;
     int wrong;
     @FXML
@@ -27,20 +27,20 @@ public class LevelOneResultsController {
         correct = LevelOneQuizController.correct;
         wrong = LevelOneQuizController.wrong;
 
-        markProgress.setText(correct + "/4"); // Displays the user's score
-        markText.setText(correct + " Marks Scored");
+        markProgressDisplay.setText(correct + "/4"); // Displays the user's score
+        markResponse.setText(correct + " Marks Scored");
 
         if (correct < 2) { // Sets the response based on the number of correct answers
-            remark.setText("1 OUT OF 4");
+            markTotal.setText("Great Effort! Read over the info again in order to help Hydro Harry bring water development to this region");
         } else if (correct == 2) {
-            remark.setText("2 OUT OF 4");
+            markTotal.setText("Halfway there! Try again and see what else could be done to spread water development");
         } else if (correct == 3) {
-            remark.setText("3 OUT OF 4");
+            markTotal.setText("So close! Just one more try and you can become a true Hydro Hero");
         } else if (correct == 4) {
-            remark.setText("4 OUT OF 4");
+            markTotal.setText("Bravo! You truly are a Hydro Hero");
         }
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), evt -> { // Sets up a timeline to switch to the level select page after a certain duration
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), evt -> { // Sets up a timeline to switch to the level select page after a certain duration
             try {
                 switchToLevelSelectPage();
             } catch (IOException e) {
@@ -57,7 +57,7 @@ public class LevelOneResultsController {
     private void switchToLevelSelectPage() throws IOException { // Method to switch back to the level select page
         FXMLLoader loader = new FXMLLoader(getClass().getResource("levelSelect.fxml"));
         Parent root = loader.load();
-        Stage stage = (Stage) remark.getScene().getWindow();
+        Stage stage = (Stage) markTotal.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
     }

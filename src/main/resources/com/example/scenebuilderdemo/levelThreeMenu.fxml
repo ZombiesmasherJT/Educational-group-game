@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.scenebuilderdemo.LevelTwoMenuController">
+            fx:controller="com.example.scenebuilderdemo.LevelThreeMenuController">
     <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../Somalia.png"/>
+        <Image url="@../../../Chad.png"/>
     </ImageView>
-    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Somalia">
+    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Chad">
         <font>
             <Font name="Arial Bold" size="30"/>
         </font>
@@ -25,13 +25,13 @@
             <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0"/>
         </effect>
     </Label>
-    <Button fx:id="playQuizTwoButton" layoutX="240.0" layoutY="363.0" mnemonicParsing="false" prefHeight="40.0"
+    <Button fx:id="playQuizThreeButton" layoutX="240.0" layoutY="363.0" mnemonicParsing="false" prefHeight="40.0"
             prefWidth="160.0" text="Quiz">
         <font>
             <Font size="20.0"/>
         </font>
     </Button>
-    <Button fx:id="playInfoTwoButton" layoutX="240.0" layoutY="271.0" mnemonicParsing="false" prefHeight="40.0"
+    <Button fx:id="playInfoThreeButton" layoutX="240.0" layoutY="271.0" mnemonicParsing="false" prefHeight="40.0"
             prefWidth="160.0" text="Info">
         <font>
             <Font name="Open Sans Semibold" size="20.0"/>

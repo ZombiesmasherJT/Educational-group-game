@@ -11,9 +11,9 @@
 <?import javafx.scene.effect.DropShadow?>
 
 <AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.scenebuilderdemo.LevelTwoInfoController">
+            fx:controller="com.example.scenebuilderdemo.LevelThreeInfoController">
     <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../Ethiopia.png"/>
+        <Image url="@../../../Chad.png"/>
     </ImageView>
     <Button fx:id="backButton" layoutX="240.0" layoutY="397.0" mnemonicParsing="false" prefHeight="40.0"
             prefWidth="160.0" text="BACK">
@@ -22,7 +22,7 @@
         </font>
     </Button>
     <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500"
-           text="Water Development in Somalia">
+           text="Water Development in Chad">
         <font>
             <Font name="Arial Bold" size="30"/>
         </font>

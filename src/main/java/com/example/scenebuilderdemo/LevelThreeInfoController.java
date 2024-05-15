@@ -2,54 +2,42 @@ package com.example.scenebuilderdemo;
 
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
- *This class is responsible for generating the menu page for level one
+ *This class is responsible for generating the information page for level three
  * @author Tedi Mengjezi
  */
-public class LevelOneMenuController {
+public class LevelThreeInfoController {
     @FXML
-    private Button playInfoOneButton;
+    public TextField infoText;
     @FXML
-    private Button playQuizOneButton;
+    private Button backButton;
     @FXML
     private void initialize() {
-        setupButtonAnimation(playInfoOneButton); // Sets up the animation for buttons
-        setupButtonAnimation(playQuizOneButton);
-        playInfoOneButton.setOnAction(this::handleInfoButton); // Action event for Info Button
-        playQuizOneButton.setOnAction(this::handleQuizButton); // Action event for Quiz Button
+        loadInfo(); // Loads the information into the TextField
+        setupButtonAnimation(backButton); // Sets up the animation for buttons
+        backButton.setOnAction(this::handleBackButton); // Action event for backButton
     }
-    private void handleInfoButton(ActionEvent event) { // Method to handle Info Button
+    private void handleBackButton(ActionEvent event) { // Method for the Back Button
         try {
             closeCurrentStage(event); // Method to close current stage
-            loadNewStage("levelOneInfo.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+            loadNewStage("levelThreeMenu.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Prints the stack trace for debugging purposes
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
             error.setTitle("Error");
-            error.setHeaderText("An error has occurred");
-            error.setContentText("Unable to load the Information for Level One");
-            error.showAndWait();
-        }
-    }
-    private void handleQuizButton(ActionEvent event) { // Method to handle Quiz Button
-        try {
-            closeCurrentStage(event); // Method to close current stage
-            loadNewStage("levelOneQuiz.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
-        } catch (Exception e) {
-            e.printStackTrace();
-            Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
-            error.setTitle("Error");
-            error.setHeaderText("An error has occurred");
-            error.setContentText("Unable to load the Quiz for Level One");
+            error.setHeaderText("An error occurred");
+            error.setContentText("Unable to load the menu for Level One");
             error.showAndWait();
         }
     }
@@ -66,6 +54,9 @@ public class LevelOneMenuController {
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
         stage.show();
+    }
+    private void loadInfo() { // Method which loads the information into the TextField
+        infoText.setText("INSERT TEXT REGARDING SUBJECT TOPIC HERE");
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation
         ScaleTransition st = new ScaleTransition(Duration.millis(200), button); // Creates a ScaleTransition for the button

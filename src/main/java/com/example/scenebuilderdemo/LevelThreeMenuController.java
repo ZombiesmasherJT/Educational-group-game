@@ -12,25 +12,25 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
- *This class is responsible for generating the menu page for level one
+ *This class is responsible for generating the menu page for level three
  * @author Tedi Mengjezi
  */
-public class LevelOneMenuController {
+public class LevelThreeMenuController {
     @FXML
-    private Button playInfoOneButton;
+    private Button playInfoThreeButton;
     @FXML
-    private Button playQuizOneButton;
+    private Button playQuizThreeButton;
     @FXML
     private void initialize() {
-        setupButtonAnimation(playInfoOneButton); // Sets up the animation for buttons
-        setupButtonAnimation(playQuizOneButton);
-        playInfoOneButton.setOnAction(this::handleInfoButton); // Action event for Info Button
-        playQuizOneButton.setOnAction(this::handleQuizButton); // Action event for Quiz Button
+        setupButtonAnimation(playInfoThreeButton); // Sets up the animation for buttons
+        setupButtonAnimation(playQuizThreeButton);
+        playInfoThreeButton.setOnAction(this::handleInfoButton); // Action event for Info Button
+        playQuizThreeButton.setOnAction(this::handleQuizButton); // Action event for Quiz Button
     }
     private void handleInfoButton(ActionEvent event) { // Method to handle Info Button
         try {
             closeCurrentStage(event); // Method to close current stage
-            loadNewStage("levelOneInfo.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+            loadNewStage("levelThreeInfo.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
         } catch (Exception e) {
             e.printStackTrace();
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
@@ -43,7 +43,7 @@ public class LevelOneMenuController {
     private void handleQuizButton(ActionEvent event) { // Method to handle Quiz Button
         try {
             closeCurrentStage(event); // Method to close current stage
-            loadNewStage("levelOneQuiz.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+            loadNewStage("levelThreeQuiz.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
         } catch (Exception e) {
             e.printStackTrace();
             Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user

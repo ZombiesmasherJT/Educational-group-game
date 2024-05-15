@@ -11,9 +11,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelTwoQuizController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelThreeQuizController">
     <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../SomaliaHarry.png" />
+        <Image url="@../../../ChadHarry.png" />
     </ImageView>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffbf" height="172.0" layoutX="220.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
     <Polygon fill="#ffffffbf" layoutX="336.0" layoutY="216.0" points="-16.4000244140625, -30.000015258789062, 166.4000244140625, 127.20001220703125, 61.20001220703125, -30.000015258789062" stroke="BLACK" strokeType="INSIDE" />

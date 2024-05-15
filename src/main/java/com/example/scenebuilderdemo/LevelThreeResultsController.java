@@ -14,18 +14,18 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 /**
- * This class is responsible for generating the results page for level two
+ * This class is responsible for generating the results page for level three.
  * @author Tedi Mengjezi
  */
-public class LevelTwoResultsController {
+public class LevelThreeResultsController {
     @FXML
     public Label markTotal, markProgressDisplay, markResponse;
     int correct;
     int wrong;
     @FXML
     private void initialize() {
-        correct = LevelTwoQuizController.correct;
-        wrong = LevelTwoQuizController.wrong;
+        correct = LevelThreeQuizController.correct;
+        wrong = LevelThreeQuizController.wrong;
 
         markProgressDisplay.setText(correct + "/4"); // Displays the user's score
         markResponse.setText(correct + " Marks Scored");

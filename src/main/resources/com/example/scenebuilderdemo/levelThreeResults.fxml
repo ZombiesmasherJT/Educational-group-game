@@ -11,13 +11,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelTwoResultsController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelThreeResultsController">
     <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../SomaliaHarry.png" />
+        <Image url="@../../../ChadHarry.png" />
     </ImageView>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffbf" height="70.0" layoutX="12.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="615.0" />
     <Polygon fill="#ffffffbf" layoutX="265.0" layoutY="204.0" points="-16.4000244140625, -30.000015258789062, 242.20001220703125, 139.20001220703125, 61.20001220703125, -30.000015258789062" stroke="BLACK" strokeType="INSIDE" />
-    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Somalia Quiz Results">
+    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Chad Quiz Results">
         <font>
             <Font name="Arial Bold" size="30.0" />
         </font>
