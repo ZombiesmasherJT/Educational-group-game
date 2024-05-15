@@ -9,26 +9,28 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+/**
+ *This class is responsible launching the application
+ * @author Joshua Tite
+ */
+
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainMenu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.initStyle(StageStyle.TRANSPARENT);
-        scene.setFill(Color.TRANSPARENT);
-        stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainMenu.fxml")); // Loads the FXML file for the main menu
+        Scene scene = new Scene(fxmlLoader.load()); // Creates a scene and loads the FXML content into it
+        stage.setScene(scene); // Sets the scene for the stage
+        stage.setTitle("Hydro Heroes: The Quest for Clean Water"); // Sets the title of the stage
+        stage.setResizable(false); // Makes the stage non-resizable
+        scene.setFill(Color.TRANSPARENT); // Makes the scene background transparent
+        stage.show();  // Shows the stage
 
-
-        String filepath = "gamemusic.wav";
-
-        music musicObject = new music();
-
+        String filepath = "gamemusic.wav"; // Plays background music
+        Music musicObject = new Music();
         musicObject.playMusic(filepath);
-
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(); // Launch the JavaFX application
     }
 }

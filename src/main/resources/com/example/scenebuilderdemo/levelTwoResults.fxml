@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelTwoResultsController">
+    <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../SomaliaHarry.png" />
+    </ImageView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffbf" height="70.0" layoutX="12.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" width="615.0" />
+    <Polygon fill="#ffffffbf" layoutX="265.0" layoutY="204.0" points="-16.4000244140625, -30.000015258789062, 242.20001220703125, 139.20001220703125, 61.20001220703125, -30.000015258789062" stroke="BLACK" strokeType="INSIDE" />
+    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Somalia Quiz Results">
+        <font>
+            <Font name="Arial Bold" size="30.0" />
+        </font>
+        <textFill>
+            <Color fx:value="#FFFFFF" />
+        </textFill>
+        <effect>
+            <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
+        </effect>
+    </Label>
+    <Label fx:id="markResponse" alignment="CENTER" layoutX="23.0" layoutY="94.0" prefHeight="90.0" prefWidth="592.0" text="INPUT FOR MARKS RESPONSE" wrapText="true">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font>
+        <textFill>
+            <Color fx:value="#FFFFFF" />
+        </textFill>
+        <effect>
+            <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
+        </effect>
+    </Label>
+    <Label fx:id="markProgressDisplay" alignment="CENTER" layoutX="70.0" layoutY="240.0" prefHeight="146.0" prefWidth="154.0" style="-fx-background-color: skyblue; -fx-background-radius: 16px; -fx-border-radius: 16px;" text="4/5">
+        <font>
+            <Font name="Arial Bold" size="60.0" />
+        </font>
+        <textFill>
+            <Color fx:value="#FFFFFF" />
+        </textFill>
+        <padding>
+            <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+        </padding>
+    </Label>
+    <Label fx:id="markTotal" layoutX="79.0" layoutY="409.0" text="4 Marks Scored">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font>
+        <textFill>
+            <Color fx:value="#FFFFFF" />
+        </textFill>
+        <effect>
+            <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
+        </effect>
+    </Label>
+</AnchorPane>

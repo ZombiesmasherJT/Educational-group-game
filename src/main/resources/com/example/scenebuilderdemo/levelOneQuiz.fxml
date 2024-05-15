@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelOneQuizController">
+   <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../EthiopiaHarry.png" />
+   </ImageView>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffbf" height="172.0" layoutX="220.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
+   <Polygon fill="#ffffffbf" layoutX="336.0" layoutY="216.0" points="-16.4000244140625, -30.000015258789062, 166.4000244140625, 127.20001220703125, 61.20001220703125, -30.000015258789062" stroke="BLACK" strokeType="INSIDE" />
+   <Label fx:id="question" alignment="TOP_LEFT" layoutX="234.0" layoutY="21.0" prefHeight="157.0" prefWidth="363.0" text="Question 1" wrapText="true">
+      <font>
+         <Font name="Arial Bold" size="30.0" />
+      </font>
+      <textFill>
+         <Color fx:value="#FFFFFF" />
+      </textFill>
+      <effect>
+         <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
+      </effect>
+   </Label>
+   <Button fx:id="optionOneButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#optionOneButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+   <Button fx:id="optionTwoButton" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#optionTwoButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+   <Button fx:id="optionThreeButton" layoutX="14.0" layoutY="254.0" mnemonicParsing="false" onAction="#optionThreeButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+   <Button fx:id="optionFourButton" layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#optionFourButtonClicked" prefHeight="100.0" prefWidth="180.0" text="Button">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+</AnchorPane>
