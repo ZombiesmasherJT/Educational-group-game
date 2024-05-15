@@ -35,8 +35,11 @@ public class Controller {
     public void switchToLevelThreeMenu(ActionEvent event) throws IOException {
         loadFXML("levelThreeMenu.fxml", event);
     }
-    public void switchToWorkInProgress(ActionEvent event) throws IOException {
-        loadFXML("workInProgressFile.fxml", event);
+    public void switchToLevelFourMenu(ActionEvent event) throws IOException {
+        loadFXML("levelFourMenu.fxml", event);
+    }
+    public void switchToLevelFiveMenu(ActionEvent event) throws IOException {
+        loadFXML("levelFiveMenu.fxml", event);
     }
     private void loadFXML(String fxmlFileName, ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlFileName)));

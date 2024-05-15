@@ -24,12 +24,17 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="70.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToLevelThreeMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 3">
+      <Button layoutX="70.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchToLevelThreeMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 3">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToWorkInProgress" prefHeight="40.0" prefWidth="160.0" text="LEVEL 4">
+      <Button layoutX="411.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchToLevelFourMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 4">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="240.0" layoutY="304.0" mnemonicParsing="false" onAction="#switchToLevelFiveMenu" prefHeight="40.0" prefWidth="160.0" text="LEVEL 5">
          <font>
             <Font size="20.0" />
          </font>
