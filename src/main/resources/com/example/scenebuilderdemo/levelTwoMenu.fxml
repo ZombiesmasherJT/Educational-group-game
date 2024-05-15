@@ -25,16 +25,19 @@
             <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0"/>
         </effect>
     </Label>
-    <Button fx:id="playQuizTwoButton" layoutX="240.0" layoutY="363.0" mnemonicParsing="false" prefHeight="40.0"
-            prefWidth="160.0" text="Quiz">
+    <Button fx:id="playQuizTwoButton" layoutX="240.0" layoutY="335.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Quiz">
         <font>
             <Font size="20.0"/>
         </font>
     </Button>
-    <Button fx:id="playInfoTwoButton" layoutX="240.0" layoutY="271.0" mnemonicParsing="false" prefHeight="40.0"
-            prefWidth="160.0" text="Info">
+    <Button fx:id="playInfoTwoButton" layoutX="240.0" layoutY="271.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Info">
         <font>
             <Font name="Open Sans Semibold" size="20.0"/>
+        </font>
+    </Button>
+    <Button fx:id="backButton" layoutX="240.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Back">
+        <font>
+            <Font size="20.0" />
         </font>
     </Button>
 </AnchorPane>

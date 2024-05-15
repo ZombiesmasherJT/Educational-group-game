@@ -21,11 +21,15 @@ public class LevelFourMenuController {
     @FXML
     private Button playQuizFourButton;
     @FXML
+    private Button backButton;
+    @FXML
     private void initialize() {
         setupButtonAnimation(playInfoFourButton); // Sets up the animation for buttons
         setupButtonAnimation(playQuizFourButton);
+        setupButtonAnimation(backButton);
         playInfoFourButton.setOnAction(this::handleInfoButton); // Action event for Info Button
         playQuizFourButton.setOnAction(this::handleQuizButton); // Action event for Quiz Button
+        backButton.setOnAction(this::handleBackButton); // Action event for backButton
     }
     private void handleInfoButton(ActionEvent event) { // Method to handle Info Button
         try {
@@ -50,6 +54,19 @@ public class LevelFourMenuController {
             error.setTitle("Error");
             error.setHeaderText("An error has occurred");
             error.setContentText("Unable to load the Quiz for Level One");
+            error.showAndWait();
+        }
+    }
+    private void handleBackButton(ActionEvent event) { // Method for the Back Button
+        try {
+            closeCurrentStage(event); // Method to close current stage
+            loadNewStage("levelSelect.fxml", "Hydro Heroes: The Quest for Clean Water"); // Method to load new stage
+        } catch (Exception e) {
+            e.printStackTrace(); // Prints the stack trace for debugging purposes
+            Alert error = new Alert(Alert.AlertType.ERROR); // Displays an error dialog to the user
+            error.setTitle("Error");
+            error.setHeaderText("An error occurred");
+            error.setContentText("Unable to load the menu for Level One");
             error.showAndWait();
         }
     }

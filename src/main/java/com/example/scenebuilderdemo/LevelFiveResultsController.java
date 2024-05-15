@@ -21,11 +21,9 @@ public class LevelFiveResultsController {
     @FXML
     public Label markTotal, markProgressDisplay, markResponse;
     int correct;
-    int wrong;
     @FXML
     private void initialize() {
         correct = LevelFiveQuizController.correct;
-        wrong = LevelFiveQuizController.wrong;
 
         markProgressDisplay.setText(correct + "/4"); // Displays the user's score
         markResponse.setText(correct + " Marks Scored");
@@ -40,7 +38,7 @@ public class LevelFiveResultsController {
             markTotal.setText("Bravo! You truly are a Hydro Hero");
         }
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), evt -> { // Sets up a timeline to switch to the level select page after a certain duration
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(7.5), evt -> { // Sets up a timeline to switch to the level select page after a certain duration
             try {
                 switchToLevelSelectPage();
             } catch (IOException e) {

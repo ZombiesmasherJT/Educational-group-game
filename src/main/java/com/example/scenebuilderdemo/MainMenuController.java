@@ -14,6 +14,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
+/**
+ *This class is responsible for controlling the main menu
+ * @author Joshua Tite
+ */
+
 public class MainMenuController {
     @FXML
     private Button startButton;
@@ -23,7 +28,7 @@ public class MainMenuController {
     private Button quitButton;
     @FXML
     private void initialize() {
-        setupButtonAnimation(startButton);
+        setupButtonAnimation(startButton); // Sets up the animation for buttons
         setupButtonAnimation(helpButton);
         setupButtonAnimation(quitButton);
         startButton.setOnAction(this::handleStartButton); // Action event for Back Button
@@ -58,10 +63,7 @@ public class MainMenuController {
             error.showAndWait();
         }
     }
-    @FXML
-    private void handleQuitButton() {
-        Platform.exit(); // This method will close the JavaFX application
-    }
+
     private void closeCurrentStage(ActionEvent event) { // Method to close current stage
         Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         currentStage.close();

@@ -22,12 +22,14 @@ public class LevelFiveInfoController {
     public TextField infoText;
     @FXML
     private Button backButton;
+
     @FXML
     private void initialize() {
         loadInfo(); // Loads the information into the TextField
         setupButtonAnimation(backButton); // Sets up the animation for buttons
         backButton.setOnAction(this::handleBackButton); // Action event for backButton
     }
+
     private void handleBackButton(ActionEvent event) { // Method for the Back Button
         try {
             closeCurrentStage(event); // Method to close current stage
@@ -41,10 +43,12 @@ public class LevelFiveInfoController {
             error.showAndWait();
         }
     }
+
     private void closeCurrentStage(ActionEvent event) { // Method to close current stage
         Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         currentStage.close();
     }
+
     private void loadNewStage(String fxmlFileName, String title) throws Exception { // Method to load new stage
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileName));
         Scene scene = new Scene(fxmlLoader.load());
@@ -55,9 +59,11 @@ public class LevelFiveInfoController {
         scene.setFill(Color.TRANSPARENT);
         stage.show();
     }
+
     private void loadInfo() { // Method which loads the information into the TextField
         infoText.setText("INSERT TEXT REGARDING SUBJECT TOPIC HERE");
     }
+
     private void setupButtonAnimation(Button button) { // Method which sets up button animation
         ScaleTransition st = new ScaleTransition(Duration.millis(200), button); // Creates a ScaleTransition for the button
         st.setToX(1.1); // Scales transition to X

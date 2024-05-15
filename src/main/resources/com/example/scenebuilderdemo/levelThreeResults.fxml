@@ -28,7 +28,7 @@
             <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
         </effect>
     </Label>
-    <Label fx:id="markTotal" alignment="CENTER" layoutX="23.0" layoutY="94.0" prefHeight="90.0" prefWidth="592.0" text="INPUT FOR MARKS RESPONSE" wrapText="true">
+    <Label fx:id="markResponse" alignment="CENTER" layoutX="23.0" layoutY="94.0" prefHeight="90.0" prefWidth="592.0" text="INPUT FOR MARKS RESPONSE" wrapText="true">
         <font>
             <Font name="Arial Bold" size="20.0" />
         </font>
@@ -50,7 +50,7 @@
             <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
         </padding>
     </Label>
-    <Label fx:id="markResponse" layoutX="79.0" layoutY="409.0" text="4 Marks Scored">
+    <Label fx:id="markTotal" layoutX="79.0" layoutY="409.0" text="4 Marks Scored">
         <font>
             <Font name="Arial Bold" size="20.0" />
         </font>

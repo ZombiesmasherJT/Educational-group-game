@@ -23,12 +23,10 @@ public class LevelThreeQuizController {
     public Button optionOneButton, optionTwoButton, optionThreeButton, optionFourButton; // Buttons for answer options
     static int counter = 0; // Counter which tracks the current question
     static int correct = 0; // Counter which tracks the number of correct answers
-    static int wrong = 0; // Counter which tracks the number of wrong answers
     @FXML
     private void initialize() {
         counter = 0; // Restarts the counter to start from the first question
         correct = 0; // Restarts the counter for correct questions
-        wrong = 0;   // Restarts the counter for wrong questions
         loadQuestions(); //Method which loads questions
         setupButtonAnimation(optionOneButton); // Sets up the animation for buttons
         setupButtonAnimation(optionTwoButton);
@@ -61,8 +59,6 @@ public class LevelThreeQuizController {
         boolean isAnswerCorrect = checkAnswer(selectedAnswer); // Checks if the selected answer is correct
         if (isAnswerCorrect) { // Adds to the counters based on if the answer is correct or not
             correct++;
-        } else {
-            wrong++;
         }
         if (counter == 3) { // Checks if all questions have been answered and changes scene to results page
             try {
@@ -88,8 +84,6 @@ public class LevelThreeQuizController {
         boolean isAnswerCorrect = checkAnswer(selectedAnswer);
         if (isAnswerCorrect) {
             correct++;
-        } else {
-            wrong++;
         }
         if (counter == 3) {
             try {
@@ -114,8 +108,6 @@ public class LevelThreeQuizController {
         boolean isAnswerCorrect = checkAnswer(selectedAnswer);
         if (isAnswerCorrect) {
             correct++;
-        } else {
-            wrong++;
         }
         if (counter == 3) {
             try {
@@ -140,8 +132,6 @@ public class LevelThreeQuizController {
         boolean isAnswerCorrect = checkAnswer(selectedAnswer);
         if (isAnswerCorrect) {
             correct++;
-        } else {
-            wrong++;
         }
         if (counter == 3) {
             try {
