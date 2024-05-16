@@ -13,7 +13,6 @@ Fun! and creative characters.
 Open main and run application
 
 ## Author
-Josh, Jordan, Tedi, Tom
+Josh Tite, Jordan Meecham, Tedi Mengjezi , Tom Sammon
 
-## Screenshot
-![Screenshot]()
+
