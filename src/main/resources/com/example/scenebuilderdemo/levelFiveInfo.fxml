@@ -2,37 +2,33 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.scenebuilderdemo.LevelFiveInfoController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilderdemo.LevelFiveInfoController">
     <ImageView fitHeight="480.0" fitWidth="640.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../Niger.png"/>
+        <Image url="@../../../Niger.png" />
     </ImageView>
-    <Button fx:id="backButton" layoutX="240.0" layoutY="397.0" mnemonicParsing="false" prefHeight="40.0"
-            prefWidth="160.0" text="BACK">
+    <Button fx:id="backButton" layoutX="240.0" layoutY="397.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="BACK">
         <font>
-            <Font size="20.0"/>
+            <Font size="20.0" />
         </font>
     </Button>
-    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500"
-           text="Water Development in Niger">
+    <Label alignment="CENTER" layoutX="70.0" layoutY="38.0" prefHeight="50" prefWidth="500" text="Water Development in Niger">
         <font>
-            <Font name="Arial Bold" size="30"/>
+            <Font name="Arial Bold" size="30" />
         </font>
         <textFill>
-            <Color fx:value="#FFFFFF"/>
+            <Color fx:value="#FFFFFF" />
         </textFill>
         <effect>
-            <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0"/>
+            <DropShadow color="#000000" offsetX="2" offsetY="2" radius="3.0" />
         </effect>
     </Label>
-    <TextField fx:id="infoText" alignment="TOP_LEFT" editable="false" layoutX="39.0" layoutY="110.0" prefHeight="270.0"
-               prefWidth="557.0"/>
+   <TextArea fx:id="infoText" layoutX="11.0" layoutY="86.0" prefHeight="303.0" prefWidth="617.0" />
 </AnchorPane>

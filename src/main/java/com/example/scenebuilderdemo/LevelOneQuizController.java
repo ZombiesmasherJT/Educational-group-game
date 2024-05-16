@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -15,6 +16,7 @@ import java.io.IOException;
 /**
  *This class is responsible for generating the quiz page and handling all the logic for level one
  * @author Tedi Mengjezi
+ * @author Joshua Tite
  */
 public class LevelOneQuizController {
     @FXML
@@ -166,6 +168,8 @@ public class LevelOneQuizController {
         stage.setTitle(title);
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation

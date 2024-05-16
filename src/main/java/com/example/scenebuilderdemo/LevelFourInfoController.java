@@ -8,18 +8,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
  *This class is responsible for generating the information page for level four
- * @author Tedi Mengjezi
+ * @author Tom Sammon
+ * @author Jordan Meecham
  */
 public class LevelFourInfoController {
     @FXML
-    public TextField infoText;
+    public TextArea infoText;
     @FXML
     private Button backButton;
     @FXML
@@ -53,10 +56,30 @@ public class LevelFourInfoController {
         stage.setTitle(title);
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();
     }
     private void loadInfo() { // Method which loads the information into the TextField
-        infoText.setText("INSERT TEXT REGARDING SUBJECT TOPIC HERE");
+        infoText.setText("The Democratic Republic of Congo (DRC) holds over 50% of Africa’s water reserves, yet 33 million people\n" +
+                "in rural areas still lack access to quality water. Currently, only 52% of the population has access to an\n" +
+                "improved water source, and merely 29% have improved sanitation facilities. Chronic malnutrition affects\n" +
+                "43% of children under five, largely due to inadequate access to safe drinking water, sanitation, and\n" +
+                "hygiene practices. Access to safe water and proper sanitation can prevent many waterborne diseases.\n" +
+                " However, ongoing conflicts in several provinces exacerbate the spread of such diseases as large\n" +
+                "movements of displaced populations increase the pressure on limited water \n" +
+                "resources in host communities. \n" +
+                "\n" +
+                "Despite sustained efforts, the lack of access to quality water and sanitation services continues\n" +
+                "to impact the health and well-being of the population. UNICEF is working to improve these conditions\n" +
+                "by supporting initiatives that provide safe drinking water, improved sanitation facilities,\n" +
+                "and promote basic hygiene practices. The arrival of displaced people in areas with already low access\n" +
+                "to drinking water further strains available resources, necessitating coordinated efforts to enhance\n" +
+                "water and sanitation infrastructure. By addressing these critical needs, UNICEF aims to reduce the\n" +
+                "incidence of waterborne diseases and improve the overall health and nutritional status of children\n" +
+                "in the DRC.\n" +
+                "\n" +
+                "This information was sourced from the UNICEF and Water Aid websites");
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation
         ScaleTransition st = new ScaleTransition(Duration.millis(200), button); // Creates a ScaleTransition for the button

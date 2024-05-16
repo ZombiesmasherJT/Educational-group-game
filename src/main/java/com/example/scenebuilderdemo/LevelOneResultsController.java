@@ -16,6 +16,7 @@ import java.io.IOException;
 /**
  * This class is responsible for generating the results page for level one.
  * @author Tedi Mengjezi
+ * @author Joshua Tite
  */
 public class LevelOneResultsController {
     @FXML

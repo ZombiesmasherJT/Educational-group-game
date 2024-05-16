@@ -1,22 +1,21 @@
 package com.example.scenebuilderdemo;
 
 import javafx.animation.ScaleTransition;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 /**
  *This class is responsible for controlling the main menu
  * @author Joshua Tite
+ * @author Tedi Mengjezi
  */
 
 public class MainMenuController {
@@ -76,6 +75,8 @@ public class MainMenuController {
         stage.setTitle(title);
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();
     }
     private void setupButtonAnimation(Button button) {

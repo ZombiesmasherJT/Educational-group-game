@@ -5,13 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
+import javafx.scene.image.Image;
 import java.io.IOException;
 
 /**
  *This class is responsible launching the application
  * @author Joshua Tite
+ * @author Tedi Mengjezi
  */
 
 public class Main extends Application {
@@ -23,6 +23,8 @@ public class Main extends Application {
         stage.setTitle("Hydro Heroes: The Quest for Clean Water"); // Sets the title of the stage
         stage.setResizable(false); // Makes the stage non-resizable
         scene.setFill(Color.TRANSPARENT); // Makes the scene background transparent
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();  // Shows the stage
 
         String filepath = "gamemusic.wav"; // Plays background music
@@ -32,5 +34,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(); // Launch the JavaFX application
+
+
     }
 }

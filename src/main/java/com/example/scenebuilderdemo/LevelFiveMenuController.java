@@ -7,13 +7,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
  *This class is responsible for generating the menu page for level five
- * @author Tedi Mengjezi
+ * @author Tom Sammon
+ * @author Jordan Meecham
  */
 public class LevelFiveMenuController {
     @FXML
@@ -82,6 +84,8 @@ public class LevelFiveMenuController {
         stage.setTitle(title);
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation

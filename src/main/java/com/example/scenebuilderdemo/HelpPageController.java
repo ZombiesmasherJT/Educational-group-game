@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -53,23 +53,23 @@ public class HelpPageController {
         stage.setTitle(title);
         stage.setResizable(false);
         scene.setFill(Color.TRANSPARENT);
+        Image icon = new Image("/HydroHarry.png"); // Set the application icon
+        stage.getIcons().add(icon);
         stage.show();
     }
     private void loadInfo() { //Method which loads the information into the TextField
         infoText.setText("ATTENTION HYDRO HEROS!!!\n" +
-                "Hydro Harry needs your help! Help Hydro Harry to introduce water development across Africa\n" +
-                "and be the change children need! There are millions of children across Africa\n" +
-                        "without access to clean, healthy water, YOU can be the change!\n" +
-                        "Team up with the Hydro Heroes and join Hydro Harry \n" +
-                "on his journey to provide clean drinking water to developing countries. \n" +
-                "Stage 1: Select the country! There are multiple countries in Africa to choose from,\n" +
-                        "the more countries you finish, the more lives you save!\n" +
-                "Stage 2: Complete the quiz, save the kids!\n" +
-                "Stage 3: Get a high score! Get your own personal score on the leaderboard!\n" +
-                "Stage 4: Take a well deserved rest! You can finish anytime by just pressing the quit button,\n" +
-                "or closing the tab!\n" +
-                "Stage 5: Good luck!\n" +
-                "Remember heroes, learning saves lives! ");
+                "Hydro Harry needs your help! Help Hydro Harry to introduce water development across Africa \n" +
+                "and be the change people need! There are millions across Africa without access to \n" +
+                "clean, healthy water, YOU can be the change! Team up with the Hydro Heroes and \n" +
+                "join Hydro Harry on his journey to provide clean drinking water to developing countries. \n" +
+                "Stage 1: Select the country! There are multiple countries in Africa to choose from, \n" +
+                "the more countries you finish, the more you learn?\n" +
+                "Stage 2: Complete the quiz and help spread water development!\n" +
+                "Stage 3: Take a well deserved rest! You can finish anytime by just pressing the quit button or closing \n" +
+                "the tab!\n" +
+                "Stage 4: Good luck!\n" +
+                "Remember heroes, good learning is fun learning!");
     }
     private void setupButtonAnimation(Button button) { // Method which sets up button animation
         ScaleTransition st = new ScaleTransition(Duration.millis(200), button); // Creates a ScaleTransition for the button

@@ -15,7 +15,8 @@ import java.io.IOException;
 
 /**
  * This class is responsible for generating the results page for level five.
- * @author Tedi Mengjezi
+ * @author Tom Sammon
+ * @author Jordan Meecham
  */
 public class LevelFiveResultsController {
     @FXML
@@ -26,16 +27,16 @@ public class LevelFiveResultsController {
         correct = LevelFiveQuizController.correct;
 
         markProgressDisplay.setText(correct + "/4"); // Displays the user's score
-        markResponse.setText(correct + " Marks Scored");
+        markTotal.setText(correct + " Marks Scored");
 
         if (correct < 2) { // Sets the response based on the number of correct answers
-            markTotal.setText("Great Effort! Read over the info again in order to help Hydro Harry bring water development to this region");
+            markResponse.setText("Great Effort! Read over the info again in order to help Hydro Harry bring water development to this region");
         } else if (correct == 2) {
-            markTotal.setText("Halfway there! Try again and see what else could be done to spread water development");
+            markResponse.setText("Halfway there! Try again and see what else could be done to spread water development");
         } else if (correct == 3) {
-            markTotal.setText("So close! Just one more try and you can become a true Hydro Hero");
+            markResponse.setText("So close! Just one more try and you can become a true Hydro Hero");
         } else if (correct == 4) {
-            markTotal.setText("Bravo! You truly are a Hydro Hero");
+            markResponse.setText("Bravo! You truly are a Hydro Hero");
         }
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(7.5), evt -> { // Sets up a timeline to switch to the level select page after a certain duration

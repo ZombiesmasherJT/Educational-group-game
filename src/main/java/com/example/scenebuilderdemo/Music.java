@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *This class is responsible for music
- * @author Joshua Tite
+ * @author Jordan Meecham
  */
 public class Music {
     void playMusic(String musicLocation)
